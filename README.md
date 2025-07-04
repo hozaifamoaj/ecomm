@@ -85,14 +85,14 @@ mvn spring-boot:run
 ```
 ## What These Commands Do
 
-Navigate to the project directory (D:/OTHERS/work-ws/ecomm).
-Create the log directory (D:/logs) for application logs.
-Navigate to the Docker configuration directory (src/main/resources/docker).
-Start the PostgreSQL container (docker-compose.yml) on localhost:5432.
-Start the ELK stack containers (Elasticsearch, Logstash, Kibana, Filebeat) for logging.
-Return to the project root.
-Build the project with Maven.
-Run the application, accessible at http://localhost:8080.
+- Navigate to the project directory (D:/OTHERS/work-ws/ecomm).
+- Create the log directory (D:/logs) for application logs.
+- Navigate to the Docker configuration directory (src/main/resources/docker).
+- Start the PostgreSQL container (docker-compose.yml) on localhost:5432.
+- Start the ELK stack containers (Elasticsearch, Logstash, Kibana, Filebeat) for logging.
+- Return to the project root.
+- Build the project with Maven.
+- Run the application, accessible at http://localhost:8080.
 
 ## Prerequisites
 
