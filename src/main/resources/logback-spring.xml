@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- File Appender for writing logs to D:\logs\app.log -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>D:\logs\app.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>{"message":"%msg","level":"%level","logger":"%logger","timestamp":"%date{yyyy-MM-dd'T'HH:mm:ss.SSSZ}"}%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Console Appender for debugging -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root Logger Configuration -->
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Specific Logger for Application Packages -->
+    <logger name="com.test.ecomm" level="INFO" additivity="false">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+</configuration>

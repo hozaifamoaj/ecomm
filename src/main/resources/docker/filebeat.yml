@@ -1,0 +1,15 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/app/*.log
+
+output.logstash:
+  hosts: [ "logstash:5044" ]
+
+setup.kibana:
+  host: "kibana:5601"
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression
