@@ -24,8 +24,8 @@ public class OrderEntity extends BaseDomain {
     CustomerEntity customer;
 
     @Column(name = "order_date", nullable = false)
-    private LocalDateTime orderDate;
+    LocalDateTime orderDate;
 
     @Column(name = "total_amount", nullable = false)
-    private BigDecimal totalAmount;
+    BigDecimal totalAmount;
 }

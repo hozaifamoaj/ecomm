@@ -12,11 +12,6 @@ import java.util.List;
 @Repository
 public interface WishlistRepository extends JpaRepository<WishlistEntity, Long> {
 
-
-    //    @Query("SELECT new com.test.ecomm.dto.WishlistItemDto(i.id, i.name, i.price) " +
-//            "FROM WishlistEntity w JOIN ItemEntity i ON w.item.id = i.id " +
-//            "WHERE w.customer.id = :customerId")
-//    List<WishlistItemDto> findWishlistItemsByCustomerId(Long customerId);
     @Query("SELECT new com.test.ecomm.dto.WishlistItemDto(i.id, i.name, i.price) " +
             "FROM WishlistEntity w JOIN ItemEntity i ON w.item = i " +
             "WHERE w.customer.id = :customerId")

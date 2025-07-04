@@ -14,17 +14,17 @@ public class OrderItemEntity extends BaseDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @ManyToOne
     @JoinColumn(name = "order_id", nullable = false)
-    private OrderEntity order;
+    OrderEntity order;
 
     @ManyToOne
     @JoinColumn(name = "item_id", nullable = false)
-    private ItemEntity item;
+    ItemEntity item;
 
     @Column(nullable = false)
-    private Integer quantity;
+    Integer quantity;
 
 }

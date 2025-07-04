@@ -14,13 +14,13 @@ public class WishlistEntity extends BaseDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
-    private CustomerEntity customer;
+    CustomerEntity customer;
 
     @ManyToOne
     @JoinColumn(name = "item_id", nullable = false)
-    private ItemEntity item;
+    ItemEntity item;
 }
