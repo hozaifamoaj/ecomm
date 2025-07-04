@@ -48,19 +48,19 @@ This Spring Boot application provides a RESTful API for an e-commerce platform, 
 ecomm/
 ├── src/
 │   ├── main/
-│   │   ├── java/com/example/ecommerce/
+│   │   ├── java/com/test/ecomm/
 │   │   │   ├── controller/ (CustomerController, SalesController)
 │   │   │   ├── service/ (CustomerService, SalesService)
 │   │   │   ├── repository/ (CustomerRepository, OrderRepository, WishlistRepository)
-│   │   │   ├── model/ (Customer, Item, Order, OrderItem, Wishlist)
+│   │   │   ├── entity/ (CustomerEntity, ItemEntity, OrderEntity, OrderItemEntity, WishlistEntity)
 │   │   │   ├── dto/ (TopSellingItemDto, WishlistItemDto)
 │   │   │   ├── exception/ (GlobalExceptionHandler, ResourceNotFoundException)
 │   │   ├── resources/
-│   │       ├── db/migration/ (V1__initial_schema.sql, V2__add_sample_data.sql, V4__add_june_data.sql)
+│   │       ├── dbscripts/ (V1__initial_schema.sql, V2__add_sample_data.sql, V4__add_june_data.sql)
 │   │       ├── application.yml (Spring configuration)
 │   │       ├── logback-spring.xml (Logging configuration)
 │   ├── test/
-│   │   ├── java/com/example/ecommerce/controller/ (CustomerControllerTest, SalesControllerTest)
+│   │   ├── java/com/test/ecomm/controller/ (CustomerControllerTest, SalesControllerTest)
 ├── src/main/resources/docker/
 │   ├── docker-compose.yml (PostgreSQL)
 │   ├── elk-docker-compose.yml (ELK stack)
